@@ -48,7 +48,12 @@ pipeline {
           
           // This'll output 3.3.3, since that's the Maven version we
           // configured above. 
-          sh "mvn -version" 
+          
+          if (isUnix()) {
+             sh "mvn -version"
+          } else {
+            bat "mvn -version" 
+          }
         }
       }
       
@@ -74,7 +79,11 @@ pipeline {
       
       steps {
         echo "This time, the Maven version should be 3.3.9"
-        sh "mvn -version"
+        if (isUnix()) {
+          sh "mvn -version"
+        } else {
+          bat "mvn -version" 
+        }
       }
     }
     

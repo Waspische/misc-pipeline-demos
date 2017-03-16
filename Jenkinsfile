@@ -69,7 +69,7 @@ pipeline {
       tools {
         // Here, we're overriding the original maven tool with a different
         // version.
-        maven "mvn3.3.9"
+        maven "M3"
       }
       
       steps {
@@ -110,14 +110,14 @@ pipeline {
     
     success {
       mail(from: "bob@example.com", 
-           to: "steve@example.com", 
+           to: "adrien.stadler@gmail.com", 
            subject: "That build passed.",
            body: "Nothing to see here")
     }
 
     failure {
       mail(from: "bob@example.com", 
-           to: "steve@example.com", 
+           to: "adrien.stadler@gmail.com", 
            subject: "That build failed!", 
            body: "Nothing to see here")
     }

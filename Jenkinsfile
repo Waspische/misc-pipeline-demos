@@ -18,8 +18,8 @@ pipeline {
     // try to use one from a plugin you've got installed and get an error and the 
     // tool isn't listed in the possible values, open a JIRA against that tool!)
     // and installations configured in your Jenkins master's tools configuration.
-    jdk "jdk8"
-    maven "mvn3.3.3"
+    jdk "J8"
+    maven "M3"
   }
   
   environment {
